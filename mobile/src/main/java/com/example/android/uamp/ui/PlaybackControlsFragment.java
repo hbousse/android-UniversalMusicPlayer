@@ -253,6 +253,8 @@ public class PlaybackControlsFragment extends Fragment {
                             state == PlaybackStateCompat.STATE_BUFFERING ||
                             state == PlaybackStateCompat.STATE_CONNECTING) {
                         pauseMedia();
+                     Toast.makeText(getActivity(), state.getErrorMessage(), Toast.LENGTH_LONG).show();
+
                     }
                     break;
             }
