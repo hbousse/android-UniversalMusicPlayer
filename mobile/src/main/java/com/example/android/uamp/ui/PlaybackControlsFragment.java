@@ -244,6 +244,7 @@ public class PlaybackControlsFragment extends Fragment {
             switch (v.getId()) {
                 case R.id.play_pause:
                     LogHelper.d(TAG, "Play button pressed, in state " + state);
+                     Toast.makeText(getActivity(), state.getErrorMessage(), Toast.LENGTH_LONG).show();
                     if (state == PlaybackStateCompat.STATE_PAUSED ||
                             state == PlaybackStateCompat.STATE_STOPPED ||
                             state == PlaybackStateCompat.STATE_NONE) {
