@@ -274,6 +274,8 @@ public class PlaybackControlsFragment extends Fragment {
                 .getSupportMediaController();
         if (controller != null) {
             controller.getTransportControls().pause();
+                                 Toast.makeText(getActivity(), state.getErrorMessage(), Toast.LENGTH_LONG).show();
+
         }
     }
 }
